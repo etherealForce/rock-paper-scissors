@@ -15,3 +15,17 @@ function getComputerChoice() {
             break;
     }
 }
+
+function getHumanChoice() {
+    let humanChoice = prompt("Choose rock, paper or scissors").toLowerCase();
+
+    if (humanChoice !== "rock" 
+        && humanChoice !== "paper" 
+        && humanChoice !== "scissors") {
+            return "Invalid choice, you dillweed";
+    } else {
+        return humanChoice;
+    }
+}
+
+console.log(getHumanChoice());
