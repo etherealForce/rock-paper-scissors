@@ -29,3 +29,36 @@ function getHumanChoice() {
         return humanChoice;
     }
 }
+
+
+function playRound(humanChoice, computerChoice) {
+    switch (humanChoice) {
+        case "rock":
+            if (computerChoice === "rock") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so it is a tie.`
+            } else if (computerChoice === "paper") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you lose.`
+            } else if (computerChoice === "scissors") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you win.`
+            }
+            break;
+        case "paper":
+            if (computerChoice === "rock") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you win.`
+            } else if (computerChoice === "paper") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so it is a tie.`
+            } else if (computerChoice === "scissors") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you lose.`
+            }
+            break;
+        case "scissors":
+            if (computerChoice === "rock") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you lose.`
+            } else if (computerChoice === "paper") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you win.`
+            } else if (computerChoice === "scissors") {
+                return `You picked ${humanChoice}\nComputer picked ${computerChoice} so it is indeed a tie.`
+            }
+            break;
+    }
+}
