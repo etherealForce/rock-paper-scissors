@@ -2,7 +2,7 @@
 
 
 function getComputerChoice() {
-    let randNum = Math.floor(Math.random * 3);
+    let randNum = Math.floor(Math.random() * 3);
     switch (randNum) {
         case 0:
             return "rock";
@@ -17,3 +17,5 @@ function getComputerChoice() {
             break;
     }
 }
+
+console.log(getComputerChoice())
