@@ -37,24 +37,30 @@ function playRound(humanChoice, computerChoice) {
             if (computerChoice === "rock") {
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so it is a tie.`
             } else if (computerChoice === "paper") {
+                ++computerScore;
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you lose.`
             } else if (computerChoice === "scissors") {
+                ++humanScore;
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you win.`
             }
             break;
         case "paper":
             if (computerChoice === "rock") {
+                ++humanScore;
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you win.`
             } else if (computerChoice === "paper") {
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so it is a tie.`
             } else if (computerChoice === "scissors") {
+                ++computerScore;
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you lose.`
             }
             break;
         case "scissors":
             if (computerChoice === "rock") {
+                ++computerScore;
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you lose.`
             } else if (computerChoice === "paper") {
+                ++humanScore;
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so you win.`
             } else if (computerChoice === "scissors") {
                 return `You picked ${humanChoice}\nComputer picked ${computerChoice} so it is indeed a tie.`
