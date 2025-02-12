@@ -1,7 +1,7 @@
 "use strict"
 
 
-function playGame(humanChoice, computerChoice) {
+function playGame() {
     let humanScore = 0, computerScore = 0;
 
     function playRound(humanChoice, computerChoice) {
@@ -77,13 +77,15 @@ function getComputerChoice() {
 }
 
 function getHumanChoice() {
-    let answer = prompt("Choose your weapon.").toLowerCase();
+
 
     while (true) {
+        let answer = prompt("Choose your weapon.").toLowerCase();
         if (answer !== "rock" 
             && answer !== "paper" 
             && answer !== "scissors") {
             console.log("thats not a given choice, dillweed");
+            continue;
         } else {
             return answer;
         }
@@ -91,4 +93,4 @@ function getHumanChoice() {
 
 }
 
-playGame(getHumanChoice(), getComputerChoice());
+playGame();
