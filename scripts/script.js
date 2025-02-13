@@ -1,9 +1,10 @@
 "use strict"
 
-
+// this function plays the whole game
 function playGame() {
     let humanScore = 0, computerScore = 0;
 
+    // this function nested inside, plays 1 round of rps, returning each result of each round and updating scores
     function playRound(humanChoice, computerChoice) {
         switch (humanChoice) {
             case "rock":
@@ -41,10 +42,14 @@ function playGame() {
                 break;
         }
     }
+
+    // loops the previous function for 5 rounds, console logging each result of each round
     for (let i = 0; i < 5; i++) {
         console.log(playRound(getHumanChoice(), getComputerChoice()));
     }
-    
+
+
+    // Determine the final result of the battle
     if (humanScore > computerScore) {
         console.log("Victory!");
     } else if (humanScore < computerScore ) {
@@ -58,7 +63,7 @@ function playGame() {
 
 
 
-
+// return computer's random choice of rock,paper or scissors
 function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3);
     switch (randNum) {
@@ -76,8 +81,8 @@ function getComputerChoice() {
     }
 }
 
+// prompt user for input, lowercase it then make sure its rock,paper or scissors
 function getHumanChoice() {
-
 
     while (true) {
         let answer = prompt("Choose your weapon.").toLowerCase();
