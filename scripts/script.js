@@ -83,9 +83,14 @@ function getComputerChoice() {
 
 // prompt user for input, lowercase it then make sure its rock,paper or scissors
 function getHumanChoice() {
-
+    let answer;
     while (true) {
-        let answer = prompt("Choose your weapon.").toLowerCase();
+        answer = prompt("Choose your weapon");
+        if (answer === null) {
+            console.log("You can't do that, dillweed");
+            continue;
+        }
+        answer = answer.toLowerCase();
         if (answer !== "rock" 
             && answer !== "paper" 
             && answer !== "scissors") {
