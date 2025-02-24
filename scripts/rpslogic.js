@@ -1,6 +1,39 @@
 "use strict"
 let computerScore = 0, humanScore = 0;
 const report = document.querySelector(".report.text");
+const options = document.querySelector(".options.list");
+const humanScoreReport = document.querySelector(".human");
+const computerScoreReport = document.querySelector(".computer");
+const btns = document.querySelectorAll(".options button");
+const finalReport = document.querySelector(".report.final");
+
+//bubbling technique for buttons
+options.addEventListener("click", (e) => {
+    let target = e.target;
+
+    switch(target.id) {
+        case "rock":
+            playRound("rock", getComputerChoice());
+            break;
+        case "paper":
+            playRound("paper", getComputerChoice());
+            break;
+        case "scissors":
+            playRound("scissors", getComputerChoice());
+            break;
+        default:
+            break;            
+    }
+    if (humanScore === 5) {
+        btns.disabled = true;
+    }
+
+    humanScoreReport.innerText = humanScore;
+    computerScoreReport.innerText = computerScore;
+});
+
+
+
 
 
 // this function nested inside, plays 1 round of rps, returning each result of each round and updating scores
@@ -56,36 +89,3 @@ function getComputerChoice() {
             break;
     }
 }
-
-// prompt user for input, lowercase it then make sure its rock,paper or scissors
-function getHumanChoice() {
-    let answer;
-    while (true) {
-        answer = prompt("Choose your weapon");
-        if (answer === null) {
-            console.log("You can't do that, dillweed");
-            continue;
-        }
-        answer = answer.toLowerCase();
-        if (answer !== "rock" 
-            && answer !== "paper" 
-            && answer !== "scissors") {
-            console.log("thats not a given choice, dillweed");
-            continue;
-        } else {
-            return answer;
-        }
-    }
-
-}
-
-const options = document.querySelector(".options.list");
-
-options.addEventListener("click", (e) => {
-    let target = e.target;
-
-    switch(target.id) {
-        case "rock":
-            
-    }
-});
