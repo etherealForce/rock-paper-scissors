@@ -1,6 +1,6 @@
 "use strict"
 let computerScore = 0, humanScore = 0;
-const report = document.querySelector(".report");
+const report = document.querySelector(".report.text");
 
 
 // this function nested inside, plays 1 round of rps, returning each result of each round and updating scores
