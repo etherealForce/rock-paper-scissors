@@ -30,7 +30,7 @@ options.addEventListener("click", (e) => {
     computerScoreReport.innerText = computerScore;
 });
 
-
+// checking win or loss and announcing
 function displayFinalReport() {
     if (humanScore === 5) {
         finalReport.innerText = "Victory.";
