@@ -34,10 +34,14 @@ options.addEventListener("click", (e) => {
 function displayFinalReport() {
     if (humanScore === 5) {
         finalReport.innerText = "Victory.";
-        btns.disabled = true;
-    } else {
+        btns.forEach((btn) => {
+            btn.disabled = true;
+        });
+    } else if (computerScore === 5) {
         finalReport.innerText = "Defeat";
-        btns.disabled = true;
+        btns.forEach((btn) => {
+            btn.disabled = true;
+        });
     }
 
 }
