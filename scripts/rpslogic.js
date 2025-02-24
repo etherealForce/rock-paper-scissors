@@ -100,3 +100,26 @@ function getComputerChoice() {
             break;
     }
 }
+
+
+// prompt user for input, lowercase it then make sure its rock,paper or scissors
+// function getHumanChoice() {
+//     let answer;
+//     while (true) {
+//         answer = prompt("Choose your weapon");
+//         if (answer === null) {
+//             console.log("You can't do that, dillweed");
+//             continue;
+//         }
+//         answer = answer.toLowerCase();
+//         if (answer !== "rock" 
+//             && answer !== "paper" 
+//             && answer !== "scissors") {
+//             console.log("thats not a given choice, dillweed");
+//             continue;
+//         } else {
+//             return answer;
+//         }
+//     }
+
+// }
