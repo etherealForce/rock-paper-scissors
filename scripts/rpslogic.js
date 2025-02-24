@@ -24,16 +24,23 @@ options.addEventListener("click", (e) => {
         default:
             break;            
     }
-    if (humanScore === 5) {
-        btns.disabled = true;
-    }
 
+    displayFinalReport();
     humanScoreReport.innerText = humanScore;
     computerScoreReport.innerText = computerScore;
 });
 
 
+function displayFinalReport() {
+    if (humanScore === 5) {
+        finalReport.innerText = "Victory.";
+        btns.disabled = true;
+    } else {
+        finalReport.innerText = "Defeat";
+        btns.disabled = true;
+    }
 
+}
 
 
 // this function nested inside, plays 1 round of rps, returning each result of each round and updating scores
