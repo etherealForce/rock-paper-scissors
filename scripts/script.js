@@ -60,9 +60,6 @@ function playGame() {
     
 }
 
-
-
-
 // return computer's random choice of rock,paper or scissors
 function getComputerChoice() {
     let randNum = Math.floor(Math.random() * 3);
