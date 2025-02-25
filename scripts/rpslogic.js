@@ -7,6 +7,9 @@ const computerScoreReport = document.querySelector(".computer");
 const btns = document.querySelectorAll(".options button");
 const finalReport = document.querySelector(".report.final");
 
+humanScoreReport.innerText = humanScore;
+computerScoreReport.innerText = computerScore;
+
 //bubbling technique for buttons
 options.addEventListener("click", (e) => {
     let target = e.target;
