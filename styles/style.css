@@ -12,11 +12,11 @@ body {
     min-height: 100vh;
 }
 
-/* .mid {
+.mid {
     display: flex;
     flex: 1 0 auto;
     height: 200px;
-} */
+}
 
 .options.box, .report {
     flex: 1 1 auto;
