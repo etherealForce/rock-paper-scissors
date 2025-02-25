@@ -4,6 +4,15 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.mid {
+    display: flex;
+}
+
+.options.box, .report {
+    flex: 1 1 auto;
+}
+
+
 ul {
     list-style-type: none;
 }
