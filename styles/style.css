@@ -1,5 +1,6 @@
 * {
     margin: 0;
+    /* padding: 0; */
 }
 
 ul {
@@ -7,9 +8,12 @@ ul {
 }
 
 
-/* .header {
+.header {
     background-color: #586e84;
-} */
+    color: #e6e8efcf;
+    font-weight: 900;
+    padding: 20px;
+}
 
 
 .header, .footer {
