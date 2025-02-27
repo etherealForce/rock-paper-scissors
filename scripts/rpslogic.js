@@ -41,7 +41,7 @@ function displayFinalReport() {
             btn.disabled = true;
         });
     } else if (computerScore === 5) {
-        finalReport.innerText = "Defeat";
+        finalReport.innerText = "Defeat.";
         btns.forEach((btn) => {
             btn.disabled = true;
         });
@@ -106,23 +106,23 @@ function getComputerChoice() {
 
 
 // prompt user for input, lowercase it then make sure its rock,paper or scissors
-// function getHumanChoice() {
-//     let answer;
-//     while (true) {
-//         answer = prompt("Choose your weapon");
-//         if (answer === null) {
-//             console.log("You can't do that, dillweed");
-//             continue;
-//         }
-//         answer = answer.toLowerCase();
-//         if (answer !== "rock" 
-//             && answer !== "paper" 
-//             && answer !== "scissors") {
-//             console.log("thats not a given choice, dillweed");
-//             continue;
-//         } else {
-//             return answer;
-//         }
-//     }
+function getHumanChoice() {
+    let answer;
+    while (true) {
+        answer = prompt("Choose your weapon");
+        if (answer === null) {
+            console.log("You can't do that, dillweed");
+            continue;
+        }
+        answer = answer.toLowerCase();
+        if (answer !== "rock" 
+            && answer !== "paper" 
+            && answer !== "scissors") {
+            console.log("thats not a given choice, dillweed");
+            continue;
+        } else {
+            return answer;
+        }
+    }
 
-// }
+}
